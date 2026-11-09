@@ -23,9 +23,9 @@ header nav{display:none;gap:28px;font:500 0.75rem Cinzel;letter-spacing:.18em;co
 header nav b{color:var(--gold);font-weight:500;border-bottom:1px solid var(--gold);padding-bottom:4px}
 .burger{width:22px;height:14px;border-top:2px solid var(--gold);border-bottom:2px solid var(--gold);position:relative}
 .burger:after{content:'';position:absolute;left:0;right:0;top:4px;border-top:2px solid var(--gold)}
-.hero{position:relative;min-height:440px;background:url('../assets/photos/hero-cake.webp') center 35%/cover;display:flex;align-items:flex-end}
+.hero{position:relative;height:440px;background:url('../assets/photos/hero-cake.webp') center 35%/cover;display:flex;align-items:flex-end}
 .hero:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,22,.15) 0%,rgba(20,32,22,.55) 45%,rgba(20,32,22,.96) 100%)}
-.hero .in{position:relative;padding:96px 22px 30px;color:#F4ECDF;max-width:900px;margin:0 auto;width:100%}
+.hero .in{position:relative;padding:0 22px 30px;color:#F4ECDF;max-width:900px;margin:0 auto;width:100%}
 .kick{font:500 0.6875rem Cinzel;letter-spacing:.32em;color:var(--gold);display:flex;align-items:center;gap:10px}
 .kick:before{content:'';width:28px;border-top:1px solid var(--gold)}
 h1{font:600 2.375rem/1.05 'Cormorant Garamond',Georgia,serif;margin:12px 0 12px}
@@ -53,12 +53,12 @@ figcaption{font:italic 500 1.0625rem 'Cormorant Garamond',serif;color:#5d655a;pa
 .cta{text-align:center;padding:34px 22px 40px}
 .cta p{font:italic 500 1.375rem 'Cormorant Garamond',serif;margin-bottom:16px}
 .btn{display:inline-block;background:var(--gold);color:var(--forest);font:700 0.8125rem Lato;letter-spacing:.14em;padding:16px 28px;border-radius:999px}
-.btn2{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 16px;margin-top:8px;font:700 0.75rem Lato;letter-spacing:.14em;color:var(--goldd)}
+.btn2{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 16px;margin-top:8px;font:700 0.75rem Lato;letter-spacing:.14em;color:#8C6428}
 footer{background:var(--forest);color:#a9ae9f;text-align:center;padding:22px;font:400 0.75rem Lato}
 footer img{height:30px;display:block;margin:0 auto 10px}
 @media(min-width:900px){
  header{height:76px;padding:0 48px} header img{height:40px} header nav{display:flex} .burger{display:none}
- .hero{min-height:560px} .hero .in{padding:0 48px 48px} h1{font-size:4rem} .dek{font-size:1.125rem}
+ .hero{height:560px} .hero .in{padding:0 48px 48px} h1{font-size:4rem} .dek{font-size:1.125rem}
  article{padding:56px 0 10px;max-width:720px} article p{font-size:1.125rem}
  .drop:first-letter{font-size:5.25rem}
  figure{margin:40px 0} .duo{gap:12px} figcaption{padding:10px 0 0}
@@ -74,12 +74,14 @@ header nav a{color:#F4ECDF}header nav a:hover{color:var(--gold)}
 .mnav{position:relative}.mnav summary{list-style:none;cursor:pointer;width:48px;height:48px;display:flex;align-items:center;justify-content:center}
 .mnav summary::-webkit-details-marker{display:none}
 .mnav .links{position:absolute;right:0;top:52px;background:var(--green);border:1px solid rgba(232,188,125,.35);border-radius:14px;padding:8px;display:flex;flex-direction:column;min-width:200px;z-index:10}
-.mnav .links a{font:500 13px Cinzel;letter-spacing:.14em;color:#F4ECDF;padding:14px 16px;min-height:48px}
+.mnav .links a{font:500 .8125rem Cinzel;letter-spacing:.14em;color:#F4ECDF;padding:14px 16px;min-height:48px}
 .mnav .links a[aria-current]{color:var(--gold)}
-.btn,.btn2{cursor:pointer}.btn:focus-visible,.btn2:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-.btn2{display:inline-block;padding:12px 8px}
+.btn,.btn2{cursor:pointer}a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 h1,h2,p,figcaption,.pull{overflow-wrap:normal;word-break:normal;hyphens:manual}
-@media(min-width:900px){.mnav{display:none}}
+.hero{height:auto!important;min-height:440px}.hero .in{padding-top:96px}
+h1{font-size:clamp(2.2rem,9vw,3.4rem)}
+.btn2{max-width:100%;white-space:normal;text-align:center;line-height:1.4;padding-top:8px;padding-bottom:8px}.btn{max-width:100%}
+@media(min-width:900px){.mnav{display:none}.hero{min-height:560px}.hero .in{padding-top:120px}h1{font-size:clamp(3.4rem,5vw,4rem)}}
 </style></head><body>
 <header><a href="../" aria-label="Basque Bloc Cheesecake home"><img src="../assets/logo-white.png" alt="The Basque Bloc Cheesecakes"></a><nav aria-label="Main navigation"><a href="../#home">HOME</a><a href="../#menu">FLAVORS</a><a href="../#sizes">PRICES</a><b aria-current="page">OUR STORY</b><a href="https://m.me/BasqueBlocPH" target="_blank" rel="noopener noreferrer">ORDER</a></nav>
 <details class="mnav"><summary aria-label="Open menu"><span class="burger" aria-hidden="true"></span></summary><div class="links"><a href="../#home">HOME</a><a href="../#menu">FLAVORS</a><a href="../#sizes">PRICES</a><a href="./" aria-current="page">OUR STORY</a><a href="https://m.me/BasqueBlocPH" target="_blank" rel="noopener noreferrer">ORDER</a></div></details></header>
@@ -107,6 +109,6 @@ h1,h2,p,figcaption,.pull{overflow-wrap:normal;word-break:normal;hyphens:manual}
 <div class="step"><b>THE NEXT MONTHS</b><span>More customers, more pop-ups, and authentic Basque cheesecake across the Davao Region.</span></div>
 <div class="step"><b>TODAY</b><span>A brand with its own look and experience, made to be shared.</span></div>
 </div></div></section>
-<section class="cta"><p>Be part of our story.</p><a class="btn" href="https://m.me/BasqueBlocPH" target="_blank" rel="noopener noreferrer">ORDER ON MESSENGER</a><br><a class="btn2" href="https://www.facebook.com/BasqueBlocPH/" target="_blank" rel="noopener noreferrer">FOLLOW US ON FACEBOOK →</a></section></main>
+<section class="cta"><p>Be part of our story.</p><a class="btn" href="https://m.me/BasqueBlocPH" target="_blank" rel="noopener noreferrer">ORDER ON MESSENGER</a><a class="btn2" href="https://www.facebook.com/BasqueBlocPH/" target="_blank" rel="noopener noreferrer">FOLLOW US ON FACEBOOK →</a></section></main>
 <footer><a href="../"><img src="../assets/logo-white.png" alt="Back to Basque Bloc home"></a>© Basque Bloc Cheesecake · Tagum City</footer>
 </body></html>
