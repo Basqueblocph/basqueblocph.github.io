@@ -297,3 +297,15 @@ dialog .toast{top:16px;bottom:auto;left:16px;right:80px;max-width:32rem}
 .story-inner h2 em{color:var(--gold)}
 .story-inner p:not(.eyebrow){color:var(--muted);margin-bottom:1.5rem;font-size:1.0625rem;line-height:1.7}
 @media(min-width:48rem){.story-inner{grid-template-columns:2fr 3fr;gap:3.5rem}}
+
+.xmas-countdown{margin:1.4rem auto 0;max-width:22rem;padding:1rem 1.2rem;border:1px solid var(--line);border-radius:1rem;background:rgba(7,19,23,.55);text-align:center}
+.cd-label{font-size:.8125rem;font-weight:700;letter-spacing:.18em;color:var(--gold);margin:0 0 .5rem}
+.cd-boxes{display:flex;align-items:center;justify-content:center;gap:.9rem}
+.cd-box{display:flex;flex-direction:column;align-items:center;min-width:5.5rem}
+.cd-num{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(2.4rem,9vw,3rem);line-height:1;color:var(--cream);font-variant-numeric:tabular-nums}
+.cd-unit{font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+.cd-sep{font-family:'Cormorant Garamond',Georgia,serif;font-size:2.4rem;color:var(--gold);line-height:1;padding-bottom:1.4rem}
+.cd-done{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.6rem;color:#f2dbb5;margin:0}
+
+.cd-boxes[hidden],.cd-done[hidden]{display:none}
+.hero-copy .xmas-countdown{margin-left:auto!important;margin-right:auto!important}
