@@ -122,13 +122,14 @@ if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
 }
 
 (()=>{const box=document.getElementById('xmas-countdown');if(!box)return;
-const d=document.getElementById('cd-days'),h=document.getElementById('cd-hours'),done=document.getElementById('cd-done'),boxes=box.querySelector('.cd-boxes');
+const note=document.getElementById('cd-note'),d=document.getElementById('cd-days'),h=document.getElementById('cd-hours'),done=document.getElementById('cd-done'),boxes=box.querySelector('.cd-boxes');
 // Christmas at midnight Philippine time (UTC+8), whatever the visitor's own clock zone
 const tick=()=>{const now=Date.now();const phNow=new Date(now+8*3600e3);let y=phNow.getUTCFullYear();
 const isXmas=phNow.getUTCMonth()===11&&phNow.getUTCDate()===25;
-if(isXmas){boxes.hidden=true;done.hidden=false;box.setAttribute('aria-label','Merry Christmas');return}
+if(phNow.getUTCMonth()===11&&phNow.getUTCDate()>25){box.hidden=true;return}
+if(isXmas){boxes.hidden=true;note.hidden=true;done.hidden=false;box.setAttribute('aria-label','Merry Christmas');return}
 let target=Date.UTC(y,11,25)-8*3600e3;if(now>=target)target=Date.UTC(y+1,11,25)-8*3600e3;
 const hrs=Math.floor((target-now)/3600e3);const days=Math.floor(hrs/24),rem=hrs%24;
 d.textContent=days;h.textContent=String(rem).padStart(2,'0');
 box.setAttribute('aria-label',days+' days and '+rem+' hours until Christmas');boxes.hidden=false;done.hidden=true};
-tick();setInterval(tick,30000);})();
+tick();setInterval(tick,60000);})();

@@ -309,3 +309,11 @@ dialog .toast{top:16px;bottom:auto;left:16px;right:80px;max-width:32rem}
 
 .cd-boxes[hidden],.cd-done[hidden]{display:none}
 .hero-copy .xmas-countdown{margin-left:auto!important;margin-right:auto!important}
+
+.cd-boxes{gap:.75rem}
+.cd-box{min-width:6rem;min-height:5rem;justify-content:center;padding:.6rem .8rem;border:1px solid rgba(232,188,125,.6);border-radius:.75rem}
+.cd-num{font-family:Cinzel,Georgia,serif;font-weight:500;font-size:2.25rem;color:var(--gold)}
+.cd-unit{font-size:.85rem;color:var(--cream);letter-spacing:.1em}
+.cd-note{margin:.7rem 0 0;font-size:.9375rem;color:var(--muted)}
+.cd-note[hidden]{display:none}
+.xmas-countdown[hidden]{display:none}
