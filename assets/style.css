@@ -317,3 +317,7 @@ dialog .toast{top:16px;bottom:auto;left:16px;right:80px;max-width:32rem}
 .cd-note{margin:.7rem 0 0;font-size:.9375rem;color:var(--muted)}
 .cd-note[hidden]{display:none}
 .xmas-countdown[hidden]{display:none}
+
+/* Messenger icon (Uma spec: 20px, 8px gap, left of label) */
+.msgr-label{display:inline-flex;align-items:center;gap:8px}
+.msgr-icon{width:20px;height:20px;flex:none;display:block}
